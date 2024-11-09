@@ -28,8 +28,6 @@ Get model from: https://huggingface.co/ZhenyaYang/flux_1_dev_hyper_8steps_nf4/tr
 
 Put `flux_1_dev_hyper_8steps_nf4.safetensors` in `webui/models/Stable-diffusion`
 
-We can also get models from civit, for example:
-https://civitai.com/models/226533?modelVersionId=1031531
 
 ## Get example prompts from Civitai
 
@@ -42,4 +40,18 @@ Make sure to save everytime we generate.
 The images are generated in webui/outputs/txt2img-images/
 
 The saved images and log file are in webui/log/images/
+
+## Finetuned Models
+
+Get models from civit, for example:
+https://civitai.com/models/226533?modelVersionId=1031531
+
+Get VAE model from https://huggingface.co/black-forest-labs/FLUX.1-schnell/tree/main/vae
+
+and put into `models\VAE`.
+
+Get CLIP model `clip_l.safetensors` and `t5xxl_fp8_e4m3fn.safetensors` from https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main
+and put into `models\text_encoder`
+
+In WebUI, must select all 3 models in `VAE / TextEncoder` before image generation.
 
